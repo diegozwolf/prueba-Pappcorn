@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Prueba Pappcorn Digo Zuluaga</title>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="shortcut icon" href="http://pappcorn.com/wp-content/uploads/2016/10/favicon.png">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/flags.css">
+
+</head>
+<body>
+    <!-- barra de título -->
+	<div id="nav-zone">
+		<h3>Prueba Pappcorn</h3>
+	</div>
+	<!-- tabla de usuarios -->
+	<div class="container">
+		<section id="users-table">
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>#</th>
+						<th class="table.title">ID</th>
+						<th class="table.title">País</th>
+						<th class="table.title">Nombre</th>
+						<th class="table.title">Deportes</th>
+						<th class="table.title">Edad</th>
+						<th class="table.title">Borrar</th>
+						<th class="table.title">Editar</th>
+					</tr>
+				</thead>
+				<tbody id="user-rows">
+				</tbody>
+			</table>			
+					<button id='back' class="btn btn-default btn-xs">Atras</button>		
+					<button id='next' class="btn btn-default btn-xs">siguiente</button>			
+		</section>
+	</div>
+	<div class="container-fluid">
+		<footer>
+			<div class="btn-container">
+				<button class="btn btn-default create-user" id="create-user" data-toggle="modal" data-target="#form-window">
+					<span><i class="fa fa-user-plus" aria-hidden="true"></i></span>
+				</button>
+			</div>
+			<p id="add-user-text">Agregar Usuario</p>
+			<p> <i class="fa fa-check-circle fa-2x" aria-hidden="true"></i> &copy; 2017-Diego Zuluaga-Prueba Pappcorn</p>
+		</footer>
+	</div>
+
+
+
+	<!-- ventana emergente -->
+	<div class="modal fade" id="form-window" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close-modal" data-dismiss="modal" aria-hidden="true" class="close-modal">&times</button>
+						<h4>Agregar/Editar Usuario</h4>
+					</div>
+					<div class="modal-body">
+						<div class="container user-form">
+							<form action="" id="users-form">
+								<div class="form-group col-xs-6" id="id-user-form">
+									<label for="user-id">ID</label>
+									<p id="user-id" name="userId"></p>
+								</div>
+								<div class="form-group col-xs-6">
+									<label for="user-country"> País</label>
+									<select class="form-control" name="userCountry" type="text" id="user-country">
+										<option value="ar">Argentina</option>
+										<option value="bo">Bolivia</option>
+										<option value="br">Brazil</option>
+										<option value="cl">Chile</option>
+										<option value="co">Colombia</option>
+										<option value="ec">Ecuador</option>
+										<option value="mx">México</option>
+										<option value="py">Paraguay</option>
+										<option value="pe">Perú</option>
+										<option value="uy">Uruguay</option>
+										<option value="ve">Venezuela</option>
+									</select>
+
+								</div>
+								<div class="form-group">
+									<label for="user-name">Nombre</label>
+									<input type="text" name="userName" value="" class="form-control" id="user-name">
+								</div>
+								<div class="form-group">
+									<label for="user-sports">Deportes separados por comas</label>
+									<input type="text" name="userSports" value="" class="form-control" id="user-sports">
+								</div>
+								<div class="form-group">
+									<label for="user-age">Edad</label>
+									<input type="text" name="userAge" value="" class="form-control" id="user-age">
+								</div>
+								<input type="submit" value="Guardar" class="submit" id="save-user">
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	<script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="https://use.fontawesome.com/a333ede124.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/script.js"></script>
+	<script src="assets/js/firebase-paginator.js"></script>
+	<script>
+	// Initialize Firebase
+	var config = {
+		apiKey: "AIzaSyDJsZbcfUhdqKV_eHH3GqY7sqqgmXip41M",
+		authDomain: "prueba-pappcorn.firebaseapp.com",
+		databaseURL: "https://prueba-pappcorn.firebaseio.com",
+		storageBucket: "prueba-pappcorn.appspot.com",
+		messagingSenderId: "902283436845"
+	};
+	firebase.initializeApp(config);
+	</script>
+</body>
+</html>

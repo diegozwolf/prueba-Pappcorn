@@ -1,0 +1,170 @@
+
+*{ box-sizing: border-box; }
+@import 'https://fonts.googleapis.com/css?family=Alegreya+Sans';
+
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+html {
+	min-height: 100%;
+}
+
+
+body {
+	background: #F5F5F5;
+	color: #67727A;
+	font-family: 'Alegreya', sans-serif;
+	margin:0;
+	text-align: center;
+}
+
+.container {
+	margin-bottom: 100px;
+}
+
+.container-fluid {
+	bottom: 0;
+	padding-right: 0;
+	padding-left: 0;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+p {
+	font-family: 'Alegreya', sans-serif;
+	color: #F5F5F5;
+	font-size: 100%;
+	line-height: 150%;
+	padding: 3%;
+	text-align: justify;
+}
+#nav-zone {
+	background-color: #404040;
+	width: 100%;
+	height: 86px;
+
+}
+
+h3{
+	color: #00d9ff;
+	padding-top: 45px;
+	margin-top: 0px;
+}
+.table>thead>tr>th {
+    text-align: center;
+}
+#users-table {
+	margin-top: 30px;
+}
+.delete {
+	background-color: #f44336;
+	border-radius: 25%;
+}
+.edit {
+	background-color: #7cb342;
+	border-radius: 50%;
+}
+
+.modal-dialog{
+	max-width: 300px;
+	max-height: 600px;
+}
+.modal-header{
+	background-color: #f4c617;
+	color: white;
+}
+.modal-body{
+	max-width: 270px;
+	text-align: center;
+	padding: 0;
+}
+.user-form{
+	width: 300px;
+	margin-top:50px
+	margin-bottom: 30px;
+}
+#user-id{
+	color: #b0bec5;
+	font-size: 10px;
+}
+.close-modal{
+	background-color: #f4c617;
+	float: right;
+	color:white;
+	font-size: 20px;
+}
+
+.submit {
+	margin: 10px;
+	background-color: #f4c617;
+	width: 60px;
+	height: 30px;
+	color: white;
+}
+
+footer {
+	position: fixed;
+	background-color: #404040;
+	text-align: center;
+	height: 80px;
+	margin-top: 30px;
+	width:100%;
+	bottom: 0;
+	left: 0;
+}
+ footer p {
+ 	text-align: center;
+ 	margin-top: -10px;
+ }
+ .btn-container{
+ 	 width:60px;
+ 	 height:60px;
+ 	 position:absolute;
+ 	 right:0px;
+ 	 border-color: none;
+ }
+
+ #create-user{
+ 	border-radius: 100%;
+ 	border-color: none;
+ }
+ #create-user:hover, #create-user:focus{
+ 	background-color: #ffa000;
+ 	border-color: none;
+ }
+
+
+ .create-user{
+ 	background-color: #f4c617;
+ 	float: right;
+ 	border: none;
+ 	width: 60px;
+ 	height: 60px;
+ 	right:0;
+ 	bottom:0;
+ 	position:absolute;
+ 	margin-right:40px;
+ 	margin-bottom:40px;
+ 	border:none;
+ 	outline:none;
+ 	color:#FFF;
+ 	font-size:20px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    transition:.3s;
+
+ }
+ #add-user-text{
+ 	text-align: right;
+ 	margin-top: 2px;
+ 	margin-bottom: 30px;
+ 	margin-right: 0px; 	
+ 	float: right;
+ 	padding: 2em;
+ }
+ .fa-check-circle {
+ 	color: #7cb342;
+ }
